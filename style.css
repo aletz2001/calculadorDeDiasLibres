@@ -75,9 +75,7 @@ option{
 }
 
 button{
-
     background-color: #BAE2DA;
-    border-style: none;
     border-radius: 5px;
     height: 50px;
     width: 200px;
@@ -86,6 +84,7 @@ button{
     color: #fff;
     margin-top: 80px;
     border-color: #7fa39c;
+    border-width: 5px;
 }
 
 .errorMsg{
