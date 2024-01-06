@@ -87,6 +87,7 @@ button{
     margin-top: 80px;
     border-color: #7fa39c;
     border-width: 5px;
+    margin-bottom: 100px;
 }
 
 .errorMsg{
