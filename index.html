@@ -1,0 +1,50 @@
+<html>
+    <html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de dias libres</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="degreeDecoration"></div>
+
+        <div class="item pageTitle">
+            Calculador de días libres 
+        </div>
+        <div class='item formTitle'>
+            Ingrese el día que entra
+            <div class='errorMsg' id='entryDayError' >Hola</div>
+        </div>
+        <input type="date" id="entryDay" />             
+        <div class='item formTitle'>
+            Ingrese el turno en el que entra
+            <div class='errorMsg' id='shiftError' >Hola</div>
+        </div>
+        <select id="shift">
+            <option value="0">Día</option>
+            <option value="1">Noche</option>
+        </select>
+        <div class='item formTitle'>
+            Ingrese dia a consultar
+            <div class='errorMsg' id='toConsultError' >Hola</div>
+        </div>
+        <input type="date" id="toConsult" /> 
+
+        <button id="btnCalculate">Calcular</button>
+
+        <div class='degreeDecoration2'></div>
+
+        <div id="tModal">
+            <div class='degreeDecoration2'></div> 
+            <div class="modalBG"></div>
+            <div class="modal">
+                <div class='modalText'>xd</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js.js"></script>
+</html>
+</html>
