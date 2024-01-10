@@ -46,9 +46,10 @@ function dayCalculator(date1,date2,shift) {
     date1 = new Date(date1);
     date2 = new Date(date2);
     shift = parseInt(shift);
-    const weekDays = ['Lunes','Martes','Miercoles','Jueves','Viernes','Sabado','Domingo'];
+    const daysList = ['primer','segundo','tercer','cuarto','quinto'];
+    const weekDays = ['lunes','martes','miercoles','jueves','viernes','sabado','domingo'];
     const months = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
-    const shiftMeaning = ['dia','noche']
+    const shiftMeaning = ['día','noche']
     const msPerDay = 24 * 60 * 60 * 1000;
 
     
@@ -61,19 +62,19 @@ function dayCalculator(date1,date2,shift) {
         if(daysDifference <= 3 && daysDifference > 0 && shift === 1){
             tModal.style.display = "inline-block";
             modalText.textContent = `El ${weekDays[date2.getDay()]} ${date2.getDate()+1} de ${months[date2.getMonth()]} del año ${date2.getFullYear()}
-            se encuentra en el día libre número ${daysDifference} después de la semana de noche`;
+            , se encuentra en el ${daysList[daysDifference-1]} día libre, después de la semana de noche`;
             return;           
         };
         if(daysDifference <= 2 && daysDifference > 0 && shift === 0){
             tModal.style.display = "inline-block";
             modalText.textContent = `El ${weekDays[date2.getDay()]} ${date2.getDate()+1} de ${months[date2.getMonth()]} del año ${date2.getFullYear()} 
-            se encuentra en el día libre número ${daysDifference} después de la semana de dia`;
+            se encuentra en el ${daysList[daysDifference-1]} día libre, después de la semana de día`;
             return; 
         };
         if(daysDifference<= 0){
             tModal.style.display = "inline-block";
             modalText.textContent = `El ${weekDays[date2.getDay()]} ${date2.getDate()+1} de ${months[date2.getMonth()]} del año ${date2.getFullYear()}
-            se encuentra trabajando en el día número ${5 + daysDifference} en la semana de ${shiftMeaning[shift]}`;
+            se encuentra trabajando en el ${daysList[daysDifference+4]} día, en la semana de ${shiftMeaning[shift]}`;
             return; 
         };
         if(shift===1){
