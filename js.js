@@ -46,7 +46,7 @@ function dayCalculator(date1,date2,shift) {
     date1 = new Date(date1);
     date2 = new Date(date2);
     shift = parseInt(shift);
-    const weekDays = ['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sabado'];
+    const weekDays = ['Lunes','Martes','Miercoles','Jueves','Viernes','Sabado','Domingo'];
     const months = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
     const shiftMeaning = ['dia','noche']
     const msPerDay = 24 * 60 * 60 * 1000;
